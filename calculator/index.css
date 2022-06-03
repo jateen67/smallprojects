@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.output, .row1, .row2, .row3, .row4, .row5 {
+    width: 500px;
+    font-size: 0;
+}
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 25%;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.ac, .equals {
+    width: 50%;
+}
+.output {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.numbers-used, .result {
+    color: white;
+    height: 50%;
+    padding: 10px;
+}
+.result {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.numbers-used {
+    font-size: 1.2rem;
+
+}
