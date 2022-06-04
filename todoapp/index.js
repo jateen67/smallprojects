@@ -1,0 +1,5 @@
+const item = document.querySelector('.item')
+const submitBtn = document.querySelector('.submit')
+const clearBtn = document.querySelector('.clear')
+const removeBtn = document.querySelector('.remove')
+const doneBtn = document.querySelector('.done')
