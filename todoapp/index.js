@@ -11,7 +11,7 @@ submitBtn.addEventListener('click', submit)
 clearBtn.addEventListener('click', clear)
 removeBtn.forEach(e => {
     e.addEventListener('click', () => {
-        remove()
+        remove(e)
     })
 })
 
@@ -39,8 +39,7 @@ function clear() {
     list.innerHTML = ''
 }
 
-function remove() {
-    for (let i = 0; i < list.children.length; i++) {
-        console.log(list.children[i])
-    }
+function remove(node) {
+    node.parentNode.parentNode.removeChild(node.parentNode)
+
 }
