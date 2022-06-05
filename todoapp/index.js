@@ -2,14 +2,19 @@ const item = document.querySelector('.item')
 const submitBtn = document.querySelector('.submit')
 const clearBtn = document.querySelector('.clear')
 let removeBtn = document.querySelectorAll('.remove')
-let doneBtn = document.querySelectorAll('.done')
 let containers = document.querySelectorAll('.element-container')
 let el = document.querySelectorAll('.element')
-const list = document.querySelector('.list')
+let list = document.querySelector('.list')
 
 
 submitBtn.addEventListener('click', submit)
 clearBtn.addEventListener('click', clear)
+removeBtn.forEach(e => {
+    e.addEventListener('click', () => {
+        remove()
+    })
+})
+
 
 function submit() {
     let newDiv = document.createElement('div')
@@ -20,17 +25,14 @@ function submit() {
     let b1 = document.createElement('button')
     b1.className = 'remove'
     b1.textContent = 'Remove'
-    let b2 = document.createElement('button')
-    b2.className = 'done'
-    b2.textContent = 'Done'
     newDiv.appendChild(newEl)
     newDiv.appendChild(b1)
-    newDiv.appendChild(b2)
     if (item.value.length > 0) list.appendChild(newDiv)
     removeBtn = document.querySelectorAll('.remove')
-    doneBtn = document.querySelectorAll('.done')
     el = document.querySelectorAll('.element')
     containers = document.querySelectorAll('.element-container')
+    list = document.querySelector('.list')
+    item.value = ''
 }
 
 function clear() {
@@ -38,9 +40,7 @@ function clear() {
 }
 
 function remove() {
-    
-}
-
-function done() {
-    
+    for (let i = 0; i < list.children.length; i++) {
+        console.log(list.children[i])
+    }
 }
