@@ -9,11 +9,13 @@ let list = document.querySelector('.list')
 
 submitBtn.addEventListener('click', submit)
 clearBtn.addEventListener('click', clear)
-removeBtn.forEach(e => {
-    e.addEventListener('click', () => {
-        remove(e)
+for (let i = 0; i < removeBtn.length; i++) {
+    removeBtn[i].addEventListener('click', function(e) {
+        let clicked = e.target
+        let divToBeRemoved = clicked.parentElement
+        list.removeChild(divToBeRemoved)
     })
-})
+}
 
 
 function submit() {
@@ -39,7 +41,3 @@ function clear() {
     list.innerHTML = ''
 }
 
-function remove(node) {
-    node.parentNode.parentNode.removeChild(node.parentNode)
-
-}
