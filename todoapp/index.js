@@ -6,17 +6,8 @@ let containers = document.querySelectorAll('.element-container')
 let el = document.querySelectorAll('.element')
 let list = document.querySelector('.list')
 
-
 submitBtn.addEventListener('click', submit)
 clearBtn.addEventListener('click', clear)
-for (let i = 0; i < removeBtn.length; i++) {
-    removeBtn[i].addEventListener('click', function(e) {
-        let clicked = e.target
-        let divToBeRemoved = clicked.parentElement
-        list.removeChild(divToBeRemoved)
-    })
-}
-
 
 function submit() {
     let newDiv = document.createElement('div')
@@ -35,9 +26,14 @@ function submit() {
     containers = document.querySelectorAll('.element-container')
     list = document.querySelector('.list')
     item.value = ''
+    b1.setAttribute('onclick', 'rem(this)')
 }
 
 function clear() {
     list.innerHTML = ''
 }
 
+function rem(o) {
+    var p = o.parentNode
+    p.parentNode.removeChild(p)
+}
