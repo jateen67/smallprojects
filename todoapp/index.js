@@ -1,9 +1,6 @@
 const item = document.querySelector('.item')
 const submitBtn = document.querySelector('.submit')
 const clearBtn = document.querySelector('.clear')
-let removeBtn = document.querySelectorAll('.remove')
-let containers = document.querySelectorAll('.element-container')
-let el = document.querySelectorAll('.element')
 let list = document.querySelector('.list')
 
 submitBtn.addEventListener('click', submit)
@@ -21,10 +18,6 @@ function submit() {
     newDiv.appendChild(newEl)
     newDiv.appendChild(b1)
     if (item.value.length > 0) list.appendChild(newDiv)
-    removeBtn = document.querySelectorAll('.remove')
-    el = document.querySelectorAll('.element')
-    containers = document.querySelectorAll('.element-container')
-    list = document.querySelector('.list')
     item.value = ''
     b1.setAttribute('onclick', 'rem(this)')
 }
