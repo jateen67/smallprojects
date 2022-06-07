@@ -26,6 +26,9 @@ function add() {
         newRow.appendChild(newAmountCol)
         newRow.appendChild(newBtnCol)
         table.appendChild(newRow)
+        name.value = ''
+        date.value = ''
+        amount.value = ''
     }
 }
 
